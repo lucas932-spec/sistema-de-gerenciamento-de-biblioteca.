@@ -1,0 +1,16 @@
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.bak
+
+# Configurações de ambiente e banco de dados
+.env
+*.sql.bak
+
+# Diretórios de IDEs
+.idea/
+.vscode/
