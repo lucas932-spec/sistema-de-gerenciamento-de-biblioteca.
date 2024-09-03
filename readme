@@ -1,0 +1,49 @@
+Biblioteca Digital
+
+Neste projeto, criaremos um banco de dados para gerenciar uma biblioteca digital. O banco de dados permitirá registrar informações sobre autores, livros e empréstimos realizados. Serão implementadas tabelas para armazenar dados de autores e livros, bem como uma tabela para controlar os empréstimos de livros pelos usuários. O projeto também inclui exemplos de inserção, atualização e exclusão de dados, além de consultas SQL para recuperar informações úteis do banco de dados.
+
+Funcionalidades do Banco de Dados:
+Autores: Registro dos autores, incluindo nome e nacionalidade.
+Livros: Registro dos livros com informações como título, autor, ano de publicação e gênero.
+Empréstimos: Controle dos empréstimos de livros, incluindo dados como o nome do usuário, data de empréstimo e data de devolução.
+Este é um projeto para criar e gerenciar um banco de dados de uma biblioteca digital. Utilizando SQL, o projeto demonstra a criação de um banco de dados, a definição de tabelas e a execução de operações de manipulação de dados, como inserções, atualizações e exclusões.
+
+Estrutura do Projeto
+O banco de dados possui três tabelas principais:
+
+Autores: Tabela que armazena informações dos autores, como AutorID, Nome, e Nacionalidade.
+Livros: Tabela que armazena informações dos livros, incluindo LivroID, Titulo, AutorID (chave estrangeira para a tabela de Autores), AnoPublicacao e Genero.
+Empréstimos: Tabela que registra os empréstimos de livros, incluindo EmprestimoID, LivroID (chave estrangeira para a tabela de Livros), DataEmprestimo, DataDevolucao e NomeUsuario.
+Requisitos
+MySQL Server ou outro gerenciador de banco de dados compatível com SQL.
+Um cliente SQL para executar os comandos (como MySQL Workbench, DBeaver, etc.).
+Instruções
+Criar o banco de dados e as tabelas:
+
+Execute o script SQL a partir do "Passo 1" para criar o banco de dados Biblioteca e definir as tabelas necessárias.
+Inserir dados iniciais:
+
+Execute os comandos de "Passo 5" e "Passo 6" para popular as tabelas Autores e Livros com dados iniciais.
+Gerenciar empréstimos:
+
+Utilize o "Passo 7" para inserir registros na tabela de Empréstimos.
+Consultas:
+
+Utilize as consultas SQL fornecidas para listar os livros, os empréstimos em aberto e realizar outras operações de gerenciamento.
+Atualizações e Exclusões:
+
+Execute comandos SQL para atualizar ou excluir registros conforme necessário.
+Exemplo de Uso
+Listar todos os livros com os nomes de seus autores:
+SELECT Livros.Titulo, Autores.Nome AS Autor, Livros.AnoPublicacao
+FROM Livros
+JOIN Autores ON Livros.AutorID = Autores.AutorID;
+Remover um livro e seus empréstimos associados:
+DELETE FROM Emprestimos
+WHERE LivroID = 1;
+
+DELETE FROM Livros
+WHERE LivroID = 1;
+Licença
+Este projeto é distribuído sob a Licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.
+
